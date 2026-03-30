@@ -39,7 +39,7 @@ runs:
         tar -xzf $ASTYLE_DOWNLOAD_FILENAME
         cd astyle/build/gcc
         make --silent
-        sudo mv "${{ env.ASTYLE_BUILD_PATH }}/astyle/build/gcc/bin/astyle" /usr/bin
+        sudo mv bin/astyle /usr/bin
         astyle --version
     - name: "Install yq"
       shell: "bash"
