@@ -37,7 +37,7 @@ runs:
           "https://sourceforge.net/projects/astyle/files/astyle/astyle%20${{env.ASTYLE_VERSION}}/$ASTYLE_DOWNLOAD_FILENAME/download?use_mirror=cfhcable"
         # Build Artistic Style
         echo pwd $(pwd)
-        tar -xzf *.gz
+        tar -xzf $ASTYLE_DOWNLOAD_FILENAME
         echo ls $(ls)
         cd "${{ env.ASTYLE_BUILD_PATH }}/build/gcc"
         make --silent
